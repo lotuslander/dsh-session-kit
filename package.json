@@ -1,0 +1,54 @@
+{
+  "name": "@lotuslander/dsh-session-kit",
+  "version": "1.0.0",
+  "description": "DSH 会话套件：跨会话全文搜索 + 通信 + 全局广播 + 操作审计。零依赖，支持跨工作区，默认安全（广播需显式确认）。",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "cordis",
+    "plugin",
+    "session",
+    "search",
+    "broadcast",
+    "messaging"
+  ],
+  "license": "MIT",
+  "author": "lotuslander",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lotuslander/dsh-session-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lotuslander/dsh-session-kit/issues"
+  },
+  "homepage": "https://github.com/lotuslander/dsh-session-kit#readme"
+}

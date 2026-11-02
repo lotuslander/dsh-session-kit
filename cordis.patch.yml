@@ -1,0 +1,25 @@
+# dsh-session-kit bundle patch
+# 把插件挂进 profile 的宿主组合（自注册）。
+# 由 package.json 的 dsh.bundle.patch 指向本文件，安装后自动挂载、全局可用。
+- insert:
+    - id: session-kit
+      name: 'dsh-session-kit'
+      config:
+        broadcast:
+          dryRunByDefault: true
+          maxTargets: 50
+          concurrency: 5
+          requireConfirm: true
+          excludeSelf: true
+          excludeSubagents: true
+        search:
+          defaultLimit: 10
+          maxLimit: 100
+          snippetChars: 200
+        delivery:
+          defaultMode: queue
+          maxMessageChars: 8000
+          allowCrossWorkspace: true
+        audit:
+          enabled: true
+          maxEntries: 500
