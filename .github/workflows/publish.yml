@@ -17,6 +17,8 @@ jobs:
         with:
           node-version: 22
           registry-url: https://registry.npmjs.org
+      - name: 升级 npm（provenance / trusted publishing 需要 11.5+）
+        run: npm install -g npm@latest
       - name: 发布前先跑测试
         run: |
           node --test test/kit.test.mjs
