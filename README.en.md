@@ -35,11 +35,11 @@ This kit turns all three into 6 tool calls.
 
 ## Install
 
-> **npm package name is `@lotuslander/dsh-session-kit`** — the unscoped `dsh-session-kit` is taken by an unrelated project.
+> **npm package name is `@lotuslanderx/dsh-session-kit`** — the unscoped `dsh-session-kit` is taken by an unrelated project, so the org scope is used.
 
 ```powershell
 $dsh = '<DSH-install-dir>\dsh.cmd'
-& $dsh plugin --profile web add @lotuslander/dsh-session-kit
+& $dsh plugin --profile web add @lotuslanderx/dsh-session-kit
 ```
 
 Or from a local directory:

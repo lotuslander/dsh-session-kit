@@ -37,9 +37,11 @@ DSH 里多个会话同时干活，但彼此看不见：
 
 ### 安装
 
+> **npm 包名是 `@lotuslanderx/dsh-session-kit`**：不带 scope 的 `dsh-session-kit` 已被另一个无关项目占用，故采用组织 scope。
+
 ```powershell
 $dsh = '<DSH安装目录>\dsh.cmd'
-& $dsh plugin --profile web add @lotuslander/dsh-session-kit
+& $dsh plugin --profile web add @lotuslanderx/dsh-session-kit
 ```
 
 或从本地目录：

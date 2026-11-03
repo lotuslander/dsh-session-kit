@@ -1,5 +1,5 @@
 {
-  "name": "@lotuslander/dsh-session-kit",
+  "name": "@lotuslanderx/dsh-session-kit",
   "version": "1.0.0",
   "description": "DSH 会话套件：跨会话全文搜索 + 通信 + 全局广播 + 操作审计。零依赖，支持跨工作区，默认安全（广播需显式确认）。",
   "keywords": [
@@ -14,6 +14,9 @@
     "messaging"
   ],
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "lotuslander",
   "type": "module",
   "main": "lib/index.js",
