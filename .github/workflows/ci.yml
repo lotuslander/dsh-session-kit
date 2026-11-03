@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: node ${{ matrix.node }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [22, 24]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - name: 功能测试
+        run: node --test test/kit.test.mjs
+      - name: 性能测试
+        run: node --test test/bench.test.mjs
+      - name: 打包体积检查
+        run: |
+          npm pack --dry-run --json > pack.json
+          node -e "const p=require('./pack.json'); const f=p[0].entryCount; console.log('files='+f+' size='+p[0].size); if (f>20) { console.error('包体文件数异常'); process.exit(1) }"

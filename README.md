@@ -1,5 +1,11 @@
 # dsh-session-kit
 
+[![CI](https://github.com/lotuslander/dsh-session-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/lotuslander/dsh-session-kit/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/@lotuslanderx/dsh-session-kit?logo=npm)](https://www.npmjs.com/package/@lotuslanderx/dsh-session-kit)
+[![downloads](https://img.shields.io/npm/dm/@lotuslanderx/dsh-session-kit)](https://www.npmjs.com/package/@lotuslanderx/dsh-session-kit)
+[![License: MIT](https://img.shields.io/npm/l/@lotuslanderx/dsh-session-kit)](LICENSE)
+[![Node](https://img.shields.io/node/v/@lotuslanderx/dsh-session-kit)](package.json)
+
 DSH 会话套件：**跨会话全文搜索 + 通信 + 全局广播 + 操作审计**，一个插件全包。
 
 零外部依赖 · 跨工作区 · 默认安全 · 上架就绪。
